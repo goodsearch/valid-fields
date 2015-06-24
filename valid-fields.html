@@ -14,12 +14,11 @@ An element providing a solution to no problem in particular.
 
 Example:
 
-    <seed-element></seed-element>
+    <valid-fields></valid-fields>
 
 @demo
 -->
-<dom-module id="seed-element">
-
+<dom-module id="valid-fields">
   <style>
     :host {
       display: block;
@@ -35,13 +34,9 @@ Example:
   </style>
 
   <template>
-    <h1>&lt;seed-element&gt;</h1>
-    <content></content>
-    <p class="author">
-      <img src="{{author.image}}">
-      Cheers,<br/>
-      <span class="name">{{author.name}}</span>
-    </p>
+    <h1>&lt;valid-fields&gt;</h1>
+    <label>{{name}}</label>
+    <input></input>
   </template>
 
 </dom-module>
@@ -50,7 +45,7 @@ Example:
 
   Polymer({
 
-    is: 'seed-element',
+    is: 'valid-fields',
 
     properties: {
 
@@ -117,9 +112,9 @@ Example:
     // Element Behavior
 
     /**
-     * The `seed-element-lasers` event is fired whenever `fireLasers` is called.
+     * The `valid-fields-lasers` event is fired whenever `fireLasers` is called.
      *
-     * @event seed-element-lasers
+     * @event valid-fields-lasers
      * @detail {{sound: String}}
      */
 
@@ -131,7 +126,7 @@ Example:
      */
     sayHello: function(greeting) {
       var response = greeting || 'Hello World!';
-      return 'seed-element says, ' + response;
+      return 'valid-fields says, ' + response;
     },
 
     /**
@@ -141,8 +136,10 @@ Example:
      * do the zapping.
      */
     fireLasers: function() {
-      this.fire('seed-element-lasers', {sound: 'Pew pew!'});
-    }
+      this.fire('valid-fields-lasers', {sound: 'Pew pew!'});
+    },
+
+    errors: []
 
   });
 

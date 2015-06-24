@@ -27,13 +27,13 @@ And you can run it via:
     polyserve
 
 Once running, you can preview your element at
-`http://localhost:8080/components/seed-element/`, where `seed-element` is the name of the directory containing it.
+`http://localhost:8080/components/valid-fields/`, where `valid-fields` is the name of the directory containing it.
 
 
 ## Testing Your Element
 
 Simply navigate to the `/test` directory of your element to run its tests. If
-you are using Polyserve: `http://localhost:8080/components/seed-element/test/`
+you are using Polyserve: `http://localhost:8080/components/valid-fields/test/`
 
 ### web-component-tester
 

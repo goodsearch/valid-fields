@@ -12,23 +12,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <title>seed-element Demo</title>
+    <title>valid-fields Demo</title>
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="../seed-element.html">
+    <link rel="import" href="../valid-fields.html">
   </head>
   <body>
 
-    <p>An example of <code>&lt;seed-element&gt;</code>:</p>
+    <p>An example of <code>&lt;valid-fields&gt;</code>:</p>
 
     <button>Say Something</button>
 
-    <seed-element author='{"name": "Lord Meowser", "image": "http://placekitten.com/g/200/300"}' fancy>
-      <h2>Hello seed-element</h2>
-    </seed-element>
+    <valid-fields name="username" author='{"name": "Lord Meowser", "image": "http://placekitten.com/g/200/300"}' fancy>
+    </valid-fields>
 
     <script>
       document.querySelector('button').addEventListener('click', function() {
-        alert(document.querySelector('seed-element').sayHello('Hallo!'));
+        alert(document.querySelector('valid-fields').sayHello('Hallo!'));
       });
     </script>
 
