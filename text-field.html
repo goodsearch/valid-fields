@@ -41,7 +41,7 @@ Example:
         <span>{{name}}</span><span hidden$="{{valid}}">:</span>
         <span>{{errors}}</span>
       </div>
-      <input id="entry" on-focusout="validate" on-keypress="clearErrors"></input>
+      <input id="entry" type="{{type}}" on-focusout="validate" on-keypress="clearErrors"></input>
     </label>
   </template>
 
@@ -61,6 +61,11 @@ Example:
       required: {
         type: Boolean,
         value: false
+      },
+
+      type: {
+        type: String,
+        value: 'text'
       },
 
       /**
