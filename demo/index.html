@@ -14,17 +14,52 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <title>valid-fields Demo</title>
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script>
+      window.Polymer = window.Polymer || {};
+      window.Polymer.dom = 'shadow';
+
+      function revealPros(){
+        document.querySelector('#the-pros').classList.toggle('hidden');
+      }
+    </script>
+    <style>
+      [unresolved] {
+        opacity: 0;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      button {
+        margin: 30px 0;
+        opacity: 0.09;
+      }
+
+      button:hover{
+        opacity: 1;
+      }
+    </style>
     <link rel="import" href="../valid-fields.html">
   </head>
   <body>
 
-    <p>An example of <code>&lt;valid-fields&gt;</code>:</p>
+    <h1>An example of <code>&lt;valid-fields&gt;</code>:</h1>
 
-    <h1>&lt;text-field&gt;</h1>
+    <h2>&lt;text-field&gt;</h2>
     <text-field name="username" required></text-field>
     <text-field name="phone number"></text-field>
     <text-field name="zip" required></text-field>
-    <h1>&lt;password-field&gt;</h1>
+    <h2>&lt;password-field&gt;</h2>
     <password-field></password-field>
+
+    <button onclick="revealPros()">But it's not great.</button>
+
+    <div id="the-pros" class="hidden">
+      <h2>Google's is better.</h2>
+      <my-dumb-container>
+        <paper-input char-counter error-message="Sorry.  I forgot to mention, only numbers, letters, and spaces." auto-validate pattern="[a-zA-Z0-9 ]*" label="* The far more impressive element from Google"></paper-input>
+      </my-dumb-container>
+    </div>
   </body>
 </html>

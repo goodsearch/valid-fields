@@ -15,26 +15,36 @@ An element providing a solution to no problem in particular.
 
 Example:
 
-    <password-field></password-field>
+    <my-dumb-container></my-dumb-container>
 
 @demo
 -->
-<dom-module id="password-field">
+<dom-module id="my-dumb-container">
   <style>
     :host {
       display: block;
       box-sizing: border-box;
     }
 
-    input {
-      margin-right: 5px;
-      max-height: 100px;
-      max-width: 100px;
+    div {
+      height: 100px;
+      width: 600px;
+      box-shadow: 0px 4px 15px #2f2f2f;
+      padding: 15px;
+      transition: box-shadow 0.4s;
     }
+
+    div:hover{
+      box-shadow: 0px 4px 25px #444444;
+      transition: box-shadow 0.4s;
+    }
+
   </style>
 
   <template>
-    <text-field name="password" type="password" required></text-field>
+    <div>
+      <content></content>
+    </div>
   </template>
 
 </dom-module>
@@ -43,7 +53,7 @@ Example:
 
   Polymer({
 
-    is: 'password-field',
+    is: 'my-dumb-container',
 
     properties: {
     },
